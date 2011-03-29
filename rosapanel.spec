@@ -49,7 +49,7 @@ ROSA panel
 %install
 %__rm -rf %{buildroot}
 
-%makeinstall_std
+%makeinstall_std -C build
 
 %__mkdir -p %{buildroot}%{_datadir}/apps/plasma/plasmoids/
 %__mkdir -p %{buildroot}%{_datadir}/kde4/services
