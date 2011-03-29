@@ -6,6 +6,7 @@ Group:		Graphical desktop/KDE
 License:        ROSA
 URL:            http://rosalab.ru/
 Source0:        %{name}-%{version}.tar.gz
+Patch0:         rosapanel-0.7-add-clock-applet.patch
 Requires: 	kdebase4-workspace 
 Requires:       python-kde4 
 Requires:       plasma-scriptengine-python
@@ -44,6 +45,9 @@ ROSA panel
 
 %prep
 %setup -q
+%patch0 -p1
+
+%build
 %cmake_kde4
 
 %install
