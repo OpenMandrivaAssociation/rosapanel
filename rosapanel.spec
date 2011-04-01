@@ -82,19 +82,3 @@ cp amarok-applet/metadata.desktop %{buildroot}%{_datadir}/kde4/services/plasma-a
 cp -rf firefox-applet %{buildroot}%{_datadir}/apps/plasma/plasmoids/firefoxra
 cp firefox-applet/metadata.desktop %{buildroot}%{_datadir}/kde4/services/plasma-applet-firefoxra.desktop  
 
-%ChangeLog                          
-
-* Sun Apr 01 2011 Eugen Kozhanov <eugeni.kozhanov@rosalab.ru>  - 0.7-22
-- Add check exist file to plasmoids
-- Fix aspect ratio in amarok applet
-
-* Fri Mar 31 2011 Eugen Kozhanov <eugeni.kozhanov@rosalab.ru>  - 0.7-21
-- Fix restore kickoff when installed rosa-launcher
-
-* Thu Mar 30 2011 Eugen Kozhanov <eugeni.kozhanov@rosalab.ru>  - 0.7-20                                                                                                        
-- Add height property
-- Change plasma applet ratio mode 
-- Fix rosa-launcher on taskbar (in patch 01 to)
-                                                                                                                                           
-* Mon Mar 14 2011 Eugen Kozhanov <eugeni.kozhanov@rosalab.ru>  - 0.7-14                                                                                                        
-- Add auto position on bottom edge  
