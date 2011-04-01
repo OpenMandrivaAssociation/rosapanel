@@ -9,6 +9,7 @@ Source0:        %{name}-%{version}.tar.gz
 Patch0:         rosapanel-0.7-add-clock-applet.patch
 Patch1:		rosapanel-0.7-heightprop.patch
 Patch2:		rosapanel-0.7-fixrestorekickoff.patch
+Patch3:		rosapanel-0.7-checkexistfiles.patch
 Requires: 	kdebase4-workspace 
 Requires:       python-kde4 
 Requires:       plasma-scriptengine-python
@@ -50,6 +51,7 @@ ROSA panel
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 %cmake_kde4
@@ -81,6 +83,11 @@ cp -rf firefox-applet %{buildroot}%{_datadir}/apps/plasma/plasmoids/firefoxra
 cp firefox-applet/metadata.desktop %{buildroot}%{_datadir}/kde4/services/plasma-applet-firefoxra.desktop  
 
 %ChangeLog                          
+
+* Sun Apr 01 2011 Eugen Kozhanov <eugeni.kozhanov@rosalab.ru>  - 0.7-22
+- Add check exist file to plasmoids
+- Fix aspect ratio in amarok applet
+
 * Fri Mar 31 2011 Eugen Kozhanov <eugeni.kozhanov@rosalab.ru>  - 0.7-21
 - Fix restore kickoff when installed rosa-launcher
 
