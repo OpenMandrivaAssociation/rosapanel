@@ -1,6 +1,6 @@
 Name:           rosapanel
 Version:        0.7
-Release:        34
+Release:        37
 Summary:        ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
 License:        GPL
@@ -9,6 +9,8 @@ Source0:        %{name}-%{version}.tar.gz
 Requires: 	kdebase4-workspace 
 Requires:       python-kde4 
 Requires:       plasma-scriptengine-python
+Requires: 	rosa-launcher 
+Requires: 	plasma-applet-stackfolder 
 BuildRequires:  kdebase4-workspace-devel 
 BuildRequires:  kdebase4-devel
 
