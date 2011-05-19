@@ -15,7 +15,6 @@ BuildRequires:  kdebase4-workspace-devel
 BuildRequires:  kdebase4-devel
 
 %files
-%defattr(-,root,root)
 %_kde_libdir/kde4/plasma_applet_tasks-applet.so
 %_kde_libdir/kde4/plasma_applet_rosaicon.so
 %_kde_libdir/kde4/plasma_applet_rosatrashcan.so
@@ -37,7 +36,6 @@ ROSA panel
 %cmake_kde4
 
 %install
-%__rm -rf %{buildroot}
 
 %makeinstall_std -C build
 
