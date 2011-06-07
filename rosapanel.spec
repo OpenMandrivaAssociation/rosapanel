@@ -1,9 +1,9 @@
 Name:           rosapanel
 Version:        0.9
-Release:      	08
+Release:      	20
 Summary:        ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
-License:        GPL
+License:        LGPL v2
 URL:            http://rosalab.ru/
 Source0:        %{name}-%{version}.tar.gz
 Requires: 	kdebase4-workspace 
