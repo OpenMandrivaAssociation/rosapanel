@@ -1,6 +1,6 @@
 Name:           rosapanel
 Version:        0.9
-Release:      	31
+Release:      	33
 Summary:        ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
 License:        LGPL v2
@@ -31,7 +31,7 @@ BuildRequires:  kdebase4-devel
 
 %description
 ROSA panel
-
+include RocketBar, and special build Icon and Trash applets.
 %prep
 %setup -q
 
