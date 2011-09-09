@@ -1,6 +1,6 @@
 Name:           rosapanel
 Version:        1.0
-Release:      	00
+Release:      	06
 Summary:        ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
 License:        LGPL v2
