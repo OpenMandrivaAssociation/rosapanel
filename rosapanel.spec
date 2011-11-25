@@ -1,6 +1,6 @@
 Name:           rosapanel
 Version:        1.0
-Release:      	19
+Release:      	20
 Summary:        ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
 License:        LGPL v2
@@ -15,6 +15,7 @@ Requires: 	plasma-applet-stackfolder
 Requires: 	plasma-desktoptheme-rosa
 BuildRequires:  kdebase4-workspace-devel 
 BuildRequires:  kdebase4-devel
+BuildRequires:  automoc4
 
 %files
 %_kde_libdir/kde4/plasma_applet_tasks-applet.so
@@ -41,6 +42,5 @@ include RocketBar, and special build Icon and Trash applets.
 %cmake_kde4
 
 %install
-
 %makeinstall_std -C build
 
