@@ -1,13 +1,12 @@
 Name:           rosapanel
 Version:        1.0
-Release:      	23
+Release:      	24
 Epoch:		1
 Summary:        ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
 License:        LGPL v2
 URL:            http://rosalab.ru/
 Source0:        %{name}-%{version}.tar.gz
-Patch0:		rosapanel-1.0-fix-casting.patch
 Requires: 	kdebase4-workspace 
 Requires:       python-kde4 
 Requires:       plasma-scriptengine-python
@@ -34,10 +33,9 @@ BuildRequires:  automoc4
 
 %description
 ROSA panel
-include RocketBar, and special build Icon and Trash applets.
+
 %prep
 %setup -q
-%patch0 -p1 -b .cast~
 
 %build
 %cmake_kde4
