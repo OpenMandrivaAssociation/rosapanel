@@ -1,6 +1,6 @@
 Name:           rosapanel
 Version:        1.0
-Release:      	24
+Release:      	25
 Epoch:		1
 Summary:        ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
