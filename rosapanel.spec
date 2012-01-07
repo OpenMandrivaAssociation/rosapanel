@@ -1,6 +1,6 @@
 Name:           rosapanel
 Version:        1.0
-Release:      	25
+Release:      	26
 Epoch:		1
 Summary:        ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
@@ -18,16 +18,8 @@ BuildRequires:  kdebase4-devel
 BuildRequires:  automoc4
 
 %files
-%_kde_libdir/kde4/plasma_applet_tasks-applet.so
-%_kde_libdir/kde4/plasma_applet_rosaicon.so
-%_kde_libdir/kde4/plasma_applet_rosatrashcan.so
-%_kde_libdir/kde4/plasma_applet_rosaseparator.so
-%_kde_libdir/kde4/plasma_containment_rosapanel.so
-%_kde_datadir/kde4/services/plasma-applet-tasks-applet.desktop
-%_kde_datadir/kde4/services/plasma-applet-rosaicon.desktop
-%_kde_datadir/kde4/services/plasma-applet-rosatrashcan.desktop
-%_kde_datadir/kde4/services/plasma-applet-rosaseparator.desktop
-%_kde_datadir/kde4/services/plasma-containment-rosapanel.desktop
+%_kde_libdir/kde4/*.so
+%_kde_services/*.desktop
 
 #--------------------------------------------------------------------
 
