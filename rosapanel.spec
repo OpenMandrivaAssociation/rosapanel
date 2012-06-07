@@ -1,12 +1,15 @@
 Name:           rosapanel
 Version:        1.0
-Release:      	26
+Release:      	27
 Epoch:		1
 Summary:        ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
 License:        LGPL v2
 URL:            http://rosalab.ru/
 Source0:        %{name}-%{version}.tar.gz
+# Use KDE's translations for ~/Documents and ~/Downloads
+# instead of providing our own that has to match...
+Patch0:		rosapanel-1.0-i18n-directories.patch
 Requires: 	kdebase4-workspace 
 Requires:       python-kde4 
 Requires:       plasma-scriptengine-python
@@ -28,6 +31,7 @@ ROSA panel
 
 %prep
 %setup -q
+%patch0 -p1 -b .i18nDirs~
 
 %build
 %cmake_kde4
