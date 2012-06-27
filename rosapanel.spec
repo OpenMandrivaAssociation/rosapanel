@@ -4,7 +4,7 @@ Release:	28
 Epoch:		1
 Summary:	ROSA panel plasmoid
 Group:		Graphical desktop/KDE 
-License:	LGPL v2
+License:	LGPLv2
 URL:		http://rosalab.ru/
 Source0:	%{name}-%{version}.tar.gz
 # Use KDE's translations for ~/Documents and ~/Downloads
