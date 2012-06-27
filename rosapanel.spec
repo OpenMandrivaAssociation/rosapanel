@@ -32,6 +32,7 @@ ROSA panel
 %prep
 %setup -q
 %patch0 -p1 -b .i18nDirs~
+find -name \*.h -o -name \*.cpp|xargs chmod 644
 
 %build
 %cmake_kde4
