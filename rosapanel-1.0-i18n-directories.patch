@@ -1,0 +1,24 @@
+--- rosapanel-1.0/panel.cpp.bero	2012-06-07 12:30:46.946381350 +0200
++++ rosapanel-1.0/panel.cpp	2012-06-07 12:31:40.808381611 +0200
+@@ -33,6 +33,7 @@
+ #include <QPainter>
+ #include <QDir>
+ 
++#include <KGlobalSettings>
+ #include <KDebug>
+ #include <KIcon>
+ #include <KIconLoader>
+@@ -328,11 +329,11 @@ void Panel::initRosa()
+     if(Plasma::Theme::defaultTheme()->themeName().toLower()=="rosa")
+ 	    addApplet("rosaseparator");
+ 
+-    args.append( QDir::homePath() + "/" + i18n("Documents") );
++    args.append(KGlobalSettings::documentPath());
+     addApplet("stackfolder",args);
+     args.removeAt(0);
+ 
+-    args.append(QDir::homePath() + "/" + i18n("Downloads"));
++    args.append(KGlobalSettings::downloadPath());
+     addApplet("stackfolder",args);
+     args.removeAt(0);
+     
