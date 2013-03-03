@@ -1,28 +1,22 @@
-Name:           rosapanel
-Version:        1.5.0
-Release:      	2
+Name:		rosapanel
+Version:	1.5.0
+Release:	2
 Epoch:		1
-Summary:        RocketBar - ROSA panel for KDE
+Summary:	RocketBar - ROSA panel for KDE
 Group:		Graphical desktop/KDE 
-License:        LGPLv2
-URL:            http://rosalab.ru/
-Source0:        %{name}-%{version}.tar.gz
+License:	LGPLv2
+URL:		http://rosalab.ru/
+Source0:	%{name}-%{version}.tar.gz
 Patch0:		rosapanel-1.5.0-replace-thunderbird-with-kmail.patch
-Requires: 	kdebase4-workspace 
-Requires:       python-kde4 
-Requires:       plasma-scriptengine-python
-Requires: 	rosa-launcher 
-Requires: 	plasma-applet-stackfolder 
-Requires: 	plasma-desktoptheme-rosa
-BuildRequires:  kdebase4-workspace-devel 
-BuildRequires:  kdebase4-devel
-BuildRequires:  automoc4
-
-%files
-%_kde_libdir/kde4/*.so
-%_kde_services/*.desktop
-
-#--------------------------------------------------------------------
+Requires:	kdebase4-workspace 
+Requires:	python-kde4 
+Requires:	plasma-scriptengine-python
+Requires:	rosa-launcher 
+Requires:	plasma-applet-stackfolder 
+Requires:	plasma-desktoptheme-rosa
+BuildRequires:	kdebase4-workspace-devel 
+BuildRequires:	kdebase4-devel
+BuildRequires:	automoc4
 
 %description
 ROSA panel
@@ -39,6 +33,10 @@ ROSA panel
 
 %install
 %makeinstall_std -C build
+
+%files
+%{_kde_libdir}/kde4/*.so
+%{_kde_services}/*.desktop
 
 %changelog
 * Sun Mar  3 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.5.0-2
