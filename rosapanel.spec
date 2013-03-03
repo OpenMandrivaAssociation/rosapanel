@@ -4,7 +4,7 @@ Release:      	2
 Epoch:		1
 Summary:        RocketBar - ROSA panel for KDE
 Group:		Graphical desktop/KDE 
-License:        LGPL v2
+License:        LGPLv2
 URL:            http://rosalab.ru/
 Source0:        %{name}-%{version}.tar.gz
 Patch0:		rosapanel-1.5.0-replace-thunderbird-with-kmail.patch
