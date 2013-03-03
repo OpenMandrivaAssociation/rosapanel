@@ -1,12 +1,13 @@
 Name:           rosapanel
 Version:        1.5.0
-Release:      	1
+Release:      	2
 Epoch:		1
 Summary:        RocketBar - ROSA panel for KDE
 Group:		Graphical desktop/KDE 
 License:        LGPL v2
 URL:            http://rosalab.ru/
 Source0:        %{name}-%{version}.tar.gz
+Patch0:		rosapanel-1.5.0-replace-thunderbird-with-kmail.patch
 Requires: 	kdebase4-workspace 
 Requires:       python-kde4 
 Requires:       plasma-scriptengine-python
@@ -28,6 +29,10 @@ ROSA panel
 
 %prep
 %setup -q
+# ROSA prolly' don't wanna, so let's make this one exclusive to mandriva...
+%if "%{disttag}" == "mdv"
+%patch0 -p1 -b .kmail~
+%endif
 
 %build
 %cmake_kde4
@@ -36,6 +41,9 @@ ROSA panel
 %makeinstall_std -C build
 
 %changelog
+* Sun Mar  3 2013 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.5.0-2
+- replace thunderbird with kmail on Mandriva Linux (P0)
+
 * Wed Dec 05 2012 Dmitry Ashkadov <dmitry.ashkadov@rosalab.ru> 1.5.0-1
 - RocketBar was updated to version 1.5.0
 
