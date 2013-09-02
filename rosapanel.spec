@@ -1,6 +1,6 @@
 Name:		rosapanel
 Version:	1.6.0
-Release:	2
+Release:	3
 Epoch:		1
 Summary:	RocketBar - ROSA panel for KDE
 Group:		Graphical desktop/KDE 
@@ -9,6 +9,7 @@ URL:		http://rosalab.ru/
 Source0:	%{name}-%{version}.tar.gz
 Patch0:		rosapanel-1.5.0-replace-thunderbird-with-kmail.patch
 Patch1:		rosapanel-1.5.0-reload.patch
+Patch2:		rosapanel-1.6.0-all-launchers.patch
 Requires:	kdebase4-workspace 
 Requires:	python-kde4 
 Requires:	plasma-scriptengine-python
@@ -18,6 +19,9 @@ Requires:	plasma-desktoptheme-rosa
 BuildRequires:	kdebase4-workspace-devel 
 BuildRequires:	kdebase4-devel
 BuildRequires:	automoc4
+# FIXME this won't be required anymore once we get rid of all-launchers
+# (unless it is picked as the default)
+Requires:	plasma-applet-lancelot
 
 %description
 ROSA panel
@@ -29,6 +33,7 @@ ROSA panel
 %patch0 -p1 -b .kmail~
 %endif
 %patch1 -p1 -b .reload~
+%patch2 -p1 -b .launchers~
 
 %build
 %cmake_kde4
