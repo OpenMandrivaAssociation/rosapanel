@@ -1,0 +1,26 @@
+diff --git a/icon-applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp b/icon-applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
+index 5252b21..0b754dc 100644
+--- a/icon-applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
++++ b/icon-applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
+@@ -99,7 +99,7 @@ void LimitSqueezeTaskbarLayout::doLayout() {
+ 			m_cellHeight = rect.height();
+ 		}
+ 
+-		QSizeF newPreferredSize(qMin(10.0, rect.width()), qMin(10.0, rect.height()));
++		QSizeF newPreferredSize(qMin(qreal(10.0), rect.width()), qMin(qreal(10.0), rect.height()));
+ 
+ 		if (newPreferredSize != m_preferredSize) {
+ 			m_preferredSize = newPreferredSize;
+diff --git a/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp b/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
+index b7f0aef..8b3fb23 100644
+--- a/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
++++ b/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
+@@ -106,7 +106,7 @@ void LimitSqueezeTaskbarLayout::doLayout() {
+ 			m_cellHeight = rect.height();
+ 		}
+ 
+-		QSizeF newPreferredSize(qMin(10.0, rect.width()), qMin(10.0, rect.height()));
++		QSizeF newPreferredSize(qMin(qreal(10.0), rect.width()), qMin(qreal(10.0), rect.height()));
+ 
+ 		if (newPreferredSize != m_preferredSize) {
+ 			m_preferredSize = newPreferredSize;

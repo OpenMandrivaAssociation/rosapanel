@@ -10,6 +10,7 @@ Source0:	%{name}-%{version}.tar.gz
 Patch0:		rosapanel-1.5.0-replace-thunderbird-with-kmail.patch
 Patch1:		rosapanel-1.5.0-reload.patch
 Patch2:		rosapanel-1.6.0-all-launchers.patch
+Patch3:		rosapanel-qreal-arm.patch
 Requires:	kdebase4-workspace 
 Requires:	python-kde4 
 Requires:	plasma-scriptengine-python
@@ -34,6 +35,7 @@ ROSA panel
 %endif
 %patch1 -p1 -b .reload~
 %patch2 -p1 -b .launchers~
+%patch3 -p1 -b .armqrl
 
 %build
 %cmake_kde4
