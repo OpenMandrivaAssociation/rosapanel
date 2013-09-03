@@ -12,7 +12,7 @@ index 5252b21..0b754dc 100644
  		if (newPreferredSize != m_preferredSize) {
  			m_preferredSize = newPreferredSize;
 diff --git a/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp b/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
-index b7f0aef..8b3fb23 100644
+index b7f0aef..1b03675 100644
 --- a/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
 +++ b/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
 @@ -106,7 +106,7 @@ void LimitSqueezeTaskbarLayout::doLayout() {
@@ -24,3 +24,12 @@ index b7f0aef..8b3fb23 100644
  
  		if (newPreferredSize != m_preferredSize) {
  			m_preferredSize = newPreferredSize;
+@@ -152,7 +152,7 @@ void LimitSqueezeTaskbarLayout::doLayout() {
+ 		cellWidth  = cellHeight * aspectRatio();
+ 		thisRowWidth = N * (cellWidth + spacing) +
+ 			(expandedItemCount - expandedHoverItemCount) * expandedWidth(); // suppress the expansion by hover
+-		compression = qMin((rows * availableWidth) / thisRowWidth, 1.0);
++		compression = qMin((rows * availableWidth) / thisRowWidth, qreal(1.0));
+ 		
+ 		if (rows * availableWidth > (thisRowWidth - N * cellWidth) * m_squeezeRatio + N * cellWidth / (rows + 1)) {
+ 			break;
