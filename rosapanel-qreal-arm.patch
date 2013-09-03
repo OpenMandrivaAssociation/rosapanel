@@ -1,5 +1,5 @@
 diff --git a/icon-applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp b/icon-applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
-index 5252b21..0b754dc 100644
+index 5252b21..a1856fa 100644
 --- a/icon-applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
 +++ b/icon-applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
 @@ -99,7 +99,7 @@ void LimitSqueezeTaskbarLayout::doLayout() {
@@ -11,6 +11,15 @@ index 5252b21..0b754dc 100644
  
  		if (newPreferredSize != m_preferredSize) {
  			m_preferredSize = newPreferredSize;
+@@ -145,7 +145,7 @@ void LimitSqueezeTaskbarLayout::doLayout() {
+ 		cellWidth  = cellHeight * aspectRatio();
+ 		thisRowWidth = N * (cellWidth + spacing) +
+ 			(expandedItemCount - expandedHoverItemCount) * expandedWidth(); // suppress the expansion by hover
+-		compression = qMin((rows * availableWidth) / thisRowWidth, 1.0);
++		compression = qMin((rows * availableWidth) / thisRowWidth, qreal(1.0));
+ 		
+ 		if (rows * availableWidth > (thisRowWidth - N * cellWidth) * m_squeezeRatio + N * cellWidth / (rows + 1)) {
+ 			break;
 diff --git a/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp b/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
 index b7f0aef..1b03675 100644
 --- a/tasks-applet/applet/SmoothTasks/LimitSqueezeTaskbarLayout.cpp
