@@ -1,6 +1,6 @@
 Name:		rosapanel
 Version:	1.6.0
-Release:	3
+Release:	4
 Epoch:		1
 Summary:	RocketBar - ROSA panel for KDE
 Group:		Graphical desktop/KDE 
@@ -13,15 +13,16 @@ Patch2:		rosapanel-1.6.0-all-launchers.patch
 Requires:	kdebase4-workspace 
 Requires:	python-kde4 
 Requires:	plasma-scriptengine-python
-Requires:	rosa-launcher 
 Requires:	plasma-applet-stackfolder 
 Requires:	plasma-desktoptheme-rosa
 BuildRequires:	kdebase4-workspace-devel 
 BuildRequires:	kdebase4-devel
 BuildRequires:	automoc4
-# FIXME this won't be required anymore once we get rid of all-launchers
-# (unless it is picked as the default)
+# FIXME those won't be required anymore once we get rid of all-launchers
+# (except for the one we pick as default)
+Requires:	rosa-launcher
 Requires:	plasma-applet-lancelot
+Requires:	homerun
 
 %description
 ROSA panel
