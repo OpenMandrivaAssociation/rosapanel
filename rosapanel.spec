@@ -14,7 +14,6 @@ Patch3:		rosapanel-qreal-arm.patch
 Requires:	kdebase4-workspace
 Requires:	python-kde4
 Requires:	plasma-scriptengine-python
-Requires:	rosa-launcher
 Requires:	plasma-applet-stackfolder
 Requires:	plasma-desktoptheme-rosa
 BuildRequires:	kdebase4-workspace-devel
