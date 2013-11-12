@@ -1,19 +1,21 @@
---- rosapanel-1.6.0/panel.cpp.omv~	2013-09-02 13:21:56.664613475 +0200
-+++ rosapanel-1.6.0/panel.cpp	2013-09-02 13:23:25.187940003 +0200
-@@ -187,9 +187,18 @@ void Panel::initRosa()
+--- rosapanel-1.6.0/panel.cpp	2013-02-05 06:19:27.000000000 +0000
++++ rosapanel-1.6.0/panel.cpp.omv	2013-11-12 21:43:19.948019064 +0000
+@@ -186,11 +186,16 @@
+     m_currentSize.expandedTo(QSize(screenRect.width(),DEFAULT_PANEL_SIZE));
      m_layout->setMaximumSize(QSize(screenRect.width(),DEFAULT_PANEL_SIZE));
      m_layout->setMinimumSize(QSize(screenRect.width(),DEFAULT_PANEL_SIZE));
-     
+-    
 +#if 0
      if (!addApplet("rosastarter")) {
          addApplet("launcher");
      }
+-    
 +#else
 +    /* It was decided that two launchers would remain.
 +     */
 +    addApplet("rosastarter");
 +    addApplet("launcher");
 +#endif
-     
      QVariantList args;
      
+     args.append( KUrl("file:///usr/share/applications/kde4/dolphin.desktop").url() );
