@@ -9,13 +9,10 @@
          addApplet("launcher");
      }
 +#else
-+    /* FIXME this is for 2013.0 beta 1 only: Add all 3 important launchers
-+     * so we can get some feedback and decide which will remain by default
++    /* We've decided on two launchers.
 +     */
 +    addApplet("launcher");
-+    addApplet("homerunlauncher");
 +    addApplet("rosastarter");
-+    addApplet("lancelot_launcher");
 +#endif
      
      QVariantList args;
