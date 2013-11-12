@@ -1,6 +1,6 @@
 Name:		rosapanel
 Version:	1.6.0
-Release:	3
+Release:	4
 Epoch:		1
 Summary:	RocketBar - ROSA panel for KDE
 Group:		Graphical desktop/KDE 
@@ -20,9 +20,6 @@ Requires:	plasma-desktoptheme-rosa
 BuildRequires:	kdebase4-workspace-devel 
 BuildRequires:	kdebase4-devel
 BuildRequires:	automoc4
-# FIXME this won't be required anymore once we get rid of all-launchers
-# (unless it is picked as the default)
-Requires:	plasma-applet-lancelot
 
 %description
 ROSA panel
