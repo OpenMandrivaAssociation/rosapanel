@@ -17,9 +17,9 @@ Requires:	python-kde4
 Requires:	plasma-scriptengine-python
 Requires:	plasma-applet-stackfolder
 Requires:	plasma-desktoptheme-rosa
-#BuildRequires:	kdebase4-workspace-devel
-#BuildRequires:	kdebase4-devel
-#BuildRequires:	automoc4
+BuildRequires:	kdebase4-workspace-devel
+BuildRequires:	kdebase4-devel
+BuildRequires:	automoc4
 
 %description
 ROSA panel for %{distribution}.
