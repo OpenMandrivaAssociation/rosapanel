@@ -1,0 +1,13 @@
+--- rosapanel-1.6.0/panel.cpp	2013-11-18 19:07:30.786872786 +0000
++++ rosapanel-1.6.0/panel.cpp.tpg	2013-11-18 19:08:22.602254628 +0000
+@@ -187,9 +187,7 @@
+     m_layout->setMaximumSize(QSize(screenRect.width(),DEFAULT_PANEL_SIZE));
+     m_layout->setMinimumSize(QSize(screenRect.width(),DEFAULT_PANEL_SIZE));
+     
+-    if (!addApplet("rosastarter")) {
+-        addApplet("launcher");
+-    }
++    addApplet("rosastarter");
+     
+     QVariantList args;
+     

@@ -11,14 +11,15 @@ Patch0:		rosapanel-1.5.0-replace-thunderbird-with-kmail.patch
 Patch1:		rosapanel-1.5.0-reload.patch
 Patch2:		rosapanel-1.6.0-all-launchers.patch
 Patch3:		rosapanel-qreal-arm.patch
+Patch4:		rosapanel-1.6.0-only-SW-no-fallback.patch
 Requires:	kdebase4-workspace
 Requires:	python-kde4
 Requires:	plasma-scriptengine-python
 Requires:	plasma-applet-stackfolder
 Requires:	plasma-desktoptheme-rosa
-BuildRequires:	kdebase4-workspace-devel
-BuildRequires:	kdebase4-devel
-BuildRequires:	automoc4
+#BuildRequires:	kdebase4-workspace-devel
+#BuildRequires:	kdebase4-devel
+#BuildRequires:	automoc4
 
 %description
 ROSA panel for %{distribution}.
@@ -28,9 +29,11 @@ ROSA panel for %{distribution}.
 # ROSA prolly' don't wanna, so let's make this one exclusive to anyone but them...
 %if "%{disttag}" != "rosa"
 %patch0 -p1 -b .kmail~
+
 %endif
 %patch1 -p1 -b .reload~
 %patch3 -p1 -b .armqrl
+%patch4 -p1
 
 %build
 %cmake_kde4
