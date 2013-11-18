@@ -1,6 +1,6 @@
 Name:		rosapanel
 Version:	1.6.0
-Release:	5
+Release:	6
 Epoch:		1
 Summary:	RocketBar - ROSA panel for KDE
 Group:		Graphical desktop/KDE
@@ -30,7 +30,6 @@ ROSA panel for %{distribution}.
 %patch0 -p1 -b .kmail~
 %endif
 %patch1 -p1 -b .reload~
-%patch2 -p1 -b .launchers~
 %patch3 -p1 -b .armqrl
 
 %build
