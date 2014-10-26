@@ -8,9 +8,7 @@ License:	LGPLv2
 URL:		http://rosalab.ru/
 Source0:	%{name}-%{version}.tar.gz
 Patch0:		rosapanel-1.5.0-replace-thunderbird-with-kmail.patch
-Patch1:		rosapanel-1.5.0-reload.patch
 Patch2:		rosapanel-1.6.0-all-launchers.patch
-Patch3:		rosapanel-qreal-arm.patch
 Requires:	kdebase4-workspace
 Requires:	python-kde4
 Requires:	plasma-scriptengine-python
@@ -30,9 +28,7 @@ ROSA panel for %{distribution}.
 %if "%{disttag}" != "rosa"
 %patch0 -p1 -b .kmail~
 %endif
-%patch1 -p1 -b .reload~
 %patch2 -p1 -b .launchers~
-%patch3 -p1 -b .armqrl
 
 %build
 %cmake_kde4
@@ -40,7 +36,9 @@ ROSA panel for %{distribution}.
 %install
 %makeinstall_std -C build
 
-%files
+%find_lang %{name}
+
+%files -f %{name}.lang
 %{_kde_libdir}/kde4/*.so
 %{_kde_services}/*.desktop
 %{_kde_appsdir}/plasma/packages/com.rosalab.expo
